@@ -1,0 +1,20 @@
+#!/bin/bash
+
+ip route | grep "default" | grep "101"
+# default via 192.168.2.2 dev enx74da384a2ac9  metric 101 
+
+if [ $? -eq 0 ]
+then
+	METRIC=500
+else
+	METRIC=101
+fi
+
+echo "changing interfaces round"
+echo $METRIC
+ip route del default via 192.168.2.2 
+ip route add default via 192.168.2.2 dev enx74da384a2ac9 metric $METRIC
+
+ip route
+
+

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "Grabbing syslog data and sending to local machine".
+
+scp root@192.168.2.13:/media/userdata/messages ~/tmp/.
+
+echo "File grabbed."
+
+
