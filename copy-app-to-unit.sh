@@ -2,7 +2,7 @@
 
 date
 
-UNIT_IP_ADDRESS=192.168.2.16
+UNIT_IP_ADDRESS=192.168.2.37
 echo "Copy file to the SmartHub".
 
 scp ~/repos/P032-Source/Application/out/app/bin/P032_App root@$UNIT_IP_ADDRESS:~/.

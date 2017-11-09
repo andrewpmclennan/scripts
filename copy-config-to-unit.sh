@@ -1,6 +1,6 @@
 #!/bin/bash
 
-$IP_ADDRESS=192.168.2.37
+IP_ADDRESS="192.168.2.37"
 
 echo "Copy setting file to unit"
 
