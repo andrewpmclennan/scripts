@@ -2,8 +2,10 @@
 
 date
 
-UNIT_IP_ADDRESS=192.168.2.37
-echo "Copy file to the SmartHub".
+if [ -z $UNIT_IP_ADDRESS ]; then
+	export UNIT_IP_ADDRESS=192.168.2.37
+fi
+echo "Copy file to the SmartHub - IP: $UNIT_IP_ADDRESS".
 
 scp ~/repos/P032-Source/Application/out/app/bin/P032_App root@$UNIT_IP_ADDRESS:~/.
 #scp ~/repos/P032-Source/Application/out/app/bin/P032_Pjsip root@192.168.2.13:~/.
